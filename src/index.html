@@ -12,11 +12,20 @@
 </head>
 
 <body>
+
     <app-root></app-root>
-    <app-app1></app-app1>
+    <footer>
+        <marquee scrollamount="5">
+            <font color=#00ae8e>
+                8 hour coding this site Gabriel R.
+            </font>
+        </marquee>
+    </footer>
+    <!-- codigo para boostrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <script>
+        /* codigo Gabriel  */
         function Ope() {
             "use strict";
             let numb1 = document.getElementById("num1").value;
@@ -31,6 +40,80 @@
                 result += numb1;
             }
             document.getElementById("res").innerHTML = result;
+        }
+    </script>
+    <script>
+        /* funcion de colores variados en resultado --importacion */
+        //not work
+        /*  function Color() {
+                                                            let colo = document.getElementById("res")
+                                                            let
+                                                            colo.style.color = "#4CAF50";
+                                                        } */
+
+        (function() {
+            setInterval(function() {
+
+                var primeraLetra = document.getElementById('res'),
+
+                    coloresDegradado = ["#a4c739", "#08F06E", "#bbd56b", "#3AB907", "#37B44E", "#3DDC5A"];
+
+
+                primeraLetra.style.color = coloresDegradado[Math.floor(Math.random() * coloresDegradado.length)];
+
+
+            }, 1000);
+        }())
+    </script>
+    <script>
+        /* codigo Espitia intento de modificacion */
+        function ini() {
+            function print_rectangle(n, m) {
+                var i, j;
+                for (i = 1; i <= n; i++) {
+                    for (j = 1; j <= m; j++) {
+                        if (i == 1 || i == n || j == 1 || j == m)
+                        //not work
+                        /* let sig = "*"; */
+                        /* let spa = "&nbsp&nbsp"; */
+                        /* document.getElementById("resul2").innerHTML = sig; */
+
+                        //condition
+                            document.write("*");
+                        else
+                        //not work
+                        /*  document.getElementById("resul2").innerHTML = spa; */
+
+                        //else condition
+                            document.write("&nbsp&nbsp");
+                    }
+                    document.write("<br>");
+                }
+            }
+
+            // Driver Code
+            var rows = 6,
+                columns = 6;
+            /* document.getElementById("resul2").innerHTML = print_rectangle(rows, columns); */
+
+
+            // This code is contributed by rdtank.
+
+            document.getElementById("resul2").innerHTML = print_rectangle(rows, columns);
+
+        }
+    </script>
+    <script>
+        /* Botones funcion */
+        function Show() {
+            let info = "In those years I have been learned in Computing how to recognize when an email it is fake and how to protect my account and navigate in the web more safety. Also, how to think like the computer how I can give others by the way to create programs, web pages and forms where I can save data from the form. Also, I have been learned how to program in Python and JavaScript. I learned how can I write the code, the number of programs I can use to put work the code. Also, identify where is the mistake in some codes that do not have the correct structure and, how to use well Excel and the use of PowerPoint. Then I learned how to create a webpage what kind of languages I need to use. Then I learned how to upload thing in the cloud and maintain all my files with me. I learned what programming language it is used to code in some pages in the way they can run efficiently and also, where I upload those files in order to have my projects to show a Human Resources my capacity on my skills of programming and how to make a calculator with JavaScript.";
+
+            document.getElementById("resul3").innerHTML = info;
+        }
+
+        function Hide() {
+            let blan = ""
+            document.getElementById("resul3").innerHTML = blan;
         }
     </script>
 
